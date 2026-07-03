@@ -89,7 +89,7 @@ nav {
 }
 .hero-sub {
   font-size: clamp(16px, 2.5vw, 20px); color: var(--text-500);
-  max-width: 560px; margin: 0 auto 36px; font-weight: 400; line-height: 1.6;
+  max-width: 600px; margin: 0 auto 36px; font-weight: 400; line-height: 1.6;
 }
 .hero-banner {
   max-width: 720px; margin: 0 auto; border-radius: var(--radius);
@@ -146,7 +146,6 @@ nav {
 .existing-module-card .em-hours { font-size: 24px; font-weight: 700; color: var(--brand-500); margin-bottom: 4px; }
 .existing-module-card .em-ability { font-size: 12px; color: var(--text-400); font-weight: 500; }
 
-.phases { display: flex; flex-direction: column; gap: 32px; }
 .phase-card {
   background: var(--bg-50); border-radius: var(--radius); overflow: hidden;
   box-shadow: var(--shadow-card);
@@ -166,8 +165,8 @@ nav {
 .phase-num { font-size: 13px; font-weight: 600; color: var(--text-400); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
 .phase-name { font-size: 24px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 4px; color: var(--text-800); }
 .phase-hours { font-size: 14px; color: var(--brand-500); font-weight: 600; margin-bottom: 12px; }
-.phase-desc { font-size: 15px; color: var(--text-500); line-height: 1.6; max-width: 560px; }
-.phase-modules { padding: 0 40px 32px; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.phase-desc { font-size: 15px; color: var(--text-500); line-height: 1.6; max-width: 600px; }
+.phase-modules { padding: 0 40px 32px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
 .module-tag {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 10px 16px; background: var(--bg-200); border-radius: var(--radius-sm);
@@ -215,18 +214,18 @@ nav {
 
 .path-section { background: var(--bg-50); border-radius: var(--radius); padding: 56px 48px; border: 1px solid rgba(0,0,0,0.04); box-shadow: var(--shadow-card); }
 .path-steps { display: flex; gap: 0; position: relative; margin-top: 40px; }
-.path-step { flex: 1; text-align: center; position: relative; padding: 0 12px; cursor: pointer; transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1); }
-.path-step:hover .path-dot { transform: translateY(-4px); }
-.path-step.active .path-dot { transform: translateY(-6px); }
+.path-step { flex: 1; text-align: center; position: relative; padding: 0 12px; cursor: pointer; }
 .path-step::before { content: ''; position: absolute; top: 24px; left: 0; right: 0; height: 3px; background: var(--bg-200); z-index: 0; }
 .path-step:last-child::before { right: 50%; }
 .path-step:first-child::before { left: 50%; }
 .path-dot { width: 48px; height: 48px; border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; font-weight: 700; font-size: 16px; color: #fff; transition: box-shadow 0.3s, transform 0.3s; }
-.path-step:hover .path-dot { box-shadow: 0 0 0 8px rgba(0,122,255,0.1); }
-.path-step.active .path-dot { box-shadow: 0 0 0 12px rgba(0,122,255,0.15); }
 .ps1 .path-dot { background: var(--brand-500); }
 .ps2 .path-dot { background: var(--success); }
 .ps3 .path-dot { background: var(--chart-4); }
+.path-step:hover .path-dot { transform: translateY(-4px); }
+.path-step.active .path-dot { transform: translateY(-6px); }
+.path-step:hover .path-dot { box-shadow: 0 0 0 8px rgba(0,122,255,0.1); }
+.path-step.active .path-dot { box-shadow: 0 0 0 12px rgba(0,122,255,0.15); }
 .ps2:hover .path-dot { box-shadow: 0 0 0 8px rgba(52,199,89,0.1) !important; }
 .ps2.active .path-dot { box-shadow: 0 0 0 12px rgba(52,199,89,0.15) !important; }
 .ps3:hover .path-dot { box-shadow: 0 0 0 8px rgba(94,92,230,0.1) !important; }
@@ -235,10 +234,7 @@ nav {
 .path-step:hover h3 { color: var(--brand-500); }
 .path-step.active h3 { color: var(--brand-500); }
 .path-step p { font-size: 13px; color: var(--text-500); line-height: 1.5; }
-.path-progress-line { position: absolute; top: 24px; left: 0; height: 3px; background: var(--brand-500); border-radius: 100px; z-index: 0; transition: width 0.6s cubic-bezier(0.32, 0.72, 0, 1), left 0.6s cubic-bezier(0.32, 0.72, 0, 1); }
-.path-indicator { position: absolute; top: 24px; width: 4px; height: 4px; background: var(--text-400); border-radius: 50%; z-index: 1; transition: opacity 0.3s; }
-.path-indicator.active { opacity: 0; }
-
+.path-progress-line { position: absolute; top: 24px; height: 3px; background: var(--brand-500); border-radius: 100px; z-index: 0; transition: width 0.6s cubic-bezier(0.32, 0.72, 0, 1), left 0.6s cubic-bezier(0.32, 0.72, 0, 1); }
 .tab-content-container { margin-top: 48px; position: relative; }
 .tab-content { position: relative; opacity: 0; transform: translateY(20px); pointer-events: none; transition: opacity 0.4s cubic-bezier(0.32, 0.72, 0, 1), transform 0.4s cubic-bezier(0.32, 0.72, 0, 1), height 0.4s ease; height: 0; overflow: hidden; }
 .tab-content.active { opacity: 1; transform: translateY(0); pointer-events: auto; height: auto; overflow: visible; }
@@ -304,12 +300,12 @@ footer p { margin-bottom: 4px; }
 <section class="hero">
   <div class="hero-badge">面向 G2-4 (7-10岁) 学生</div>
   <h1>Scratch+AI<br><span class="highlight">人工智能课程</span></h1>
-  <p class="hero-sub">从感知 AI 到应用 AI 再到创造 AI，三阶段递进式课程体系，让孩子在创作中掌握未来技能。</p>
+  <p class="hero-sub">从感知 AI 到应用 AI 再到创造 AI，三阶段递进式课程体系。全部来自现有素材，100% 复用。</p>
   <div class="hero-banner">
     <div class="hero-banner-inner">
       <div class="hero-banner-text">
         <h3>玩转 AI 五大能力</h3>
-        <p>文字朗读 / 语音识别 / 视频侦测 / 人脸追踪 / 机器学习</p>
+        <p>文字朗读 / 语音识别 / 视频侦测 / 人脸追踪 / 面部识别</p>
       </div>
       <div class="hero-banner-visual">
         <div class="ai-block">&#x1F4E3;</div>
@@ -374,17 +370,17 @@ footer p { margin-bottom: 4px; }
       <div class="highlight-item hi1">
         <div class="highlight-icon">&#x1F3AF;</div>
         <h3>AI 能力逐级解锁</h3>
-        <p>每个阶段引入新的 AI 能力，从基础感知到机器学习训练，保持持续的新鲜感和学习动力。</p>
+        <p>每个阶段引入新的 AI 能力，从基础感知到多 AI 融合与系统设计，保持持续的新鲜感和学习动力。</p>
       </div>
       <div class="highlight-item hi2">
         <div class="highlight-icon">&#x1F3AE;</div>
         <h3>游戏化进阶体系</h3>
-        <p>从"魔法师"到"工程师"到"创新家"的角色升级，配合成就徽章和竞赛活动，激发内在动机。</p>
+        <p>从"魔法师"到"工程师"到"创新家"的角色升级，配以成就徽章和竞赛活动，激发内在动机。</p>
       </div>
       <div class="highlight-item hi3">
         <div class="highlight-icon">&#x1F4BB;</div>
         <h3>丰富的创作形式</h3>
-        <p>游戏、工具、系统、创新作品四种形式均衡分布，引入模型训练和硬件联动，拓展创作边界。</p>
+        <p>游戏(35%) + 工具(30%) + 系统(20%) + 创意作品(15%)，加入硬件联动，拓展创作边界。</p>
       </div>
       <div class="highlight-item hi4">
         <div class="highlight-icon">&#x1F9E0;</div>
@@ -398,8 +394,8 @@ footer p { margin-bottom: 4px; }
 <section class="section" id="path">
   <div class="section-header">
     <div class="section-tag">学习路径</div>
-    <h2 class="section-title">编程能力进阶</h2>
-    <p class="section-desc">编程技能随课程阶段同步提升，从基础概念到高级应用。点击下方阶段切换查看详细内容。</p>
+    <h2 class="section-title">编程能力进阶 · 三阶段课程</h2>
+    <p class="section-desc">点击下方阶段切换查看详细内容，编程技能与AI能力同步提升。</p>
   </div>
   <div class="path-section">
     <div class="path-steps">
@@ -417,7 +413,7 @@ footer p { margin-bottom: 4px; }
       <div class="path-step ps3" data-phase="3">
         <div class="path-dot">3</div>
         <h3>高级编程</h3>
-        <p>链表、批量数据处理、<br>ML 模型训练</p>
+        <p>链表、批量数据处理、<br>多AI融合</p>
       </div>
     </div>
     <div class="tab-content-container">
@@ -429,7 +425,7 @@ footer p { margin-bottom: 4px; }
               <div class="phase-num">第一阶段 - 基础</div>
               <h3 class="phase-name">AI 魔法师初体验</h3>
               <div class="phase-hours">24 节课（第1-24节）</div>
-              <p class="phase-desc">通过有趣的游戏和互动项目，体验 AI 的五种基本能力，建立兴趣和好奇心。重点是"玩 AI"。</p>
+              <p class="phase-desc">通过有趣的游戏和互动项目，体验 AI 的五种基本能力，建立兴趣和好奇心。重点在于"玩 AI"而非"理解 AI"。</p>
             </div>
           </div>
           <div class="phase-bar"><div class="phase-bar-fill"></div></div>
@@ -446,12 +442,12 @@ footer p { margin-bottom: 4px; }
             <div class="source-title">素材来源</div>
             <div class="source-row">
               <span class="source-label source-existing">全部现有</span>
-              <span>01文字朗读16/01语音对话3/ (1.1~1.3)<br>
-02语音识别32/01响度相关19/ (01~04保护庄稼/穿越沙漠/小猫捉老鼠/声控风扇、05旋转风车、12声音立柱显示、13画出声音)<br>
+              <span>01文字朗读16/01语音对话3/ (1.1自我介绍、1.2英文对话、1.3会赞美人的机器人)<br>
+02语音识别32/01响度相关19/ (01保护庄稼~04声控风扇、05旋转风车、12声音立柱显示、13画出声音)<br>
 03视频侦测10/ (01制作字幕、05感应灯、07擦除泡泡、10打僵尸)<br>
 04人脸追踪4/ (01变脸游戏1、02变脸游戏2、04化装舞会)<br>
 05面部识别11/ (01~04检测表情/性别/年龄/颜值)<br>
-03视频侦测10/03迎宾机器人/ (1.7阶段项目)</span>
+03视频侦测10/03迎宾机器人/ (1.7阶段项目，融合视频侦测+TTS语音欢迎)</span>
             </div>
           </div>
           <div class="projects">
@@ -472,7 +468,7 @@ footer p { margin-bottom: 4px; }
               <div class="phase-num">第二阶段 - 实践</div>
               <h3 class="phase-name">AI 工程师养成</h3>
               <div class="phase-hours">30 节课（第25-54节）</div>
-              <p class="phase-desc">将 AI 技术应用于解决实际问题，制作具有实用价值的工具和系统。重点是"用 AI 解决问题"。</p>
+              <p class="phase-desc">将 AI 技术应用于解决实际问题，制作具有实用价值的工具和系统。重点在于"用 AI 解决问题"。</p>
             </div>
           </div>
           <div class="phase-bar"><div class="phase-bar-fill"></div></div>
@@ -489,11 +485,11 @@ footer p { margin-bottom: 4px; }
             <div class="source-row">
               <span class="source-label source-existing">全部现有</span>
               <span>02语音识别32/02语音识别13/ (01~05鹦鹉学舌/芝麻开门/语音表演/语音控制)<br>
-01文字朗读16/04点名册 (顺序点名、随机点名删除法/状态列表法) + 05排队叫号 (1.0/2.0/3.0)<br>
+01文字朗读16/04点名册 (顺序/随机删除法/状态列表法) + 05排队叫号 (1.0/2.0/3.0)<br>
 01文字朗读16/ (02语音计算器、03乘法口诀、06公交播报、07.1语音报时)<br>
-03视频侦测10/ (04报警器、05感应灯1/2) + 05面部识别11/ (07人脸签到、08人脸开门+语音识别)<br>
-02语音识别32/01响度相关19/ (06~15声控音乐盒/噪音检测仪/声光控灯/声控灯色彩变换/流水灯/心电监护仪)<br>
-02语音识别32/02语音识别13/07模拟天猫精灵语音播放音乐/ (2.6阶段项目)</span>
+03视频侦测10/ (04报警器、05感应灯1进阶、06感应灯2) + 05面部识别11/ (07人脸签到、08人脸开门+语音识别)<br>
+02语音识别32/01响度相关19/ (06声控音乐盒~15心电监护仪)<br>
+02语音识别32/02语音识别13/07模拟天猫精灵/ (2.6阶段项目，融合语音识别+TTS+指令控制)</span>
             </div>
           </div>
           <div class="projects">
@@ -515,41 +511,35 @@ footer p { margin-bottom: 4px; }
               <div class="phase-num">第三阶段 - 进阶</div>
               <h3 class="phase-name">AI 创新家</h3>
               <div class="phase-hours">29 节课（第55-83节）</div>
-              <p class="phase-desc">引入机器学习训练，亲手训练 AI 模型，进行创新创作。重点是"创造 AI"。</p>
+              <p class="phase-desc">将多个 AI 能力组合使用，制作具有综合功能的智能系统。重点在于"创造 AI 应用"。</p>
             </div>
           </div>
           <div class="phase-bar"><div class="phase-bar-fill"></div></div>
           <div class="phase-modules">
-            <div class="module-tag"><span class="dot"></span>3.1 训练AI的眼睛 - 图像分类ML (5节)</div>
-            <div class="module-tag"><span class="dot"></span>3.2 训练AI的身体 - 姿态分类ML (4节)</div>
-            <div class="module-tag"><span class="dot"></span>3.3 训练AI的耳朵 - 音频分类ML (3节)</div>
-            <div class="module-tag"><span class="dot"></span>3.4 智能系统设计 - 高级应用开发 (6节)</div>
-            <div class="module-tag"><span class="dot"></span>3.5 智能硬件联动 - 软硬结合 (4节)</div>
-            <div class="module-tag"><span class="dot"></span>3.6 阶段项目 - 对话机器人 (7节)</div>
+            <div class="module-tag"><span class="dot"></span>3.1 AI服务生活 - 语音识别高级应用 (6节)</div>
+            <div class="module-tag"><span class="dot"></span>3.2 智能系统设计 - 多模态AI系统 (6节)</div>
+            <div class="module-tag"><span class="dot"></span>3.3 创意游戏工坊 - 体感+声控进阶 (5节)</div>
+            <div class="module-tag"><span class="dot"></span>3.4 数据与硬件探索 - 数据分析+硬件 (5节)</div>
+            <div class="module-tag"><span class="dot"></span>3.5 阶段项目 - 对话机器人 (7节)</div>
           </div>
           <div class="source">
             <div class="source-title">素材来源</div>
             <div class="source-row">
-              <span class="source-label source-existing">现有</span>
-              <span>01文字朗读16/07报时定时4/ (7.3链表批量定时、7.4定时天气预报)<br>
-05面部识别11/ (08人脸开门+语音识别、09~11车牌/OCR识别)<br>
-05面部识别11/09识别车牌号1/ (乐高EV3版，用于3.5硬件联动)<br>
-02语音识别32/02语音识别13/09与机器人语音对话/ (3.6阶段项目)</span>
-            </div>
-            <div class="source-row">
-              <span class="source-label source-new">新增</span>
-              <span>3.1~3.3 可视化ML训练 (图像/姿态/音频分类，共12节)<br>
-3.5 硬件联动扩展 (LED灯+声音可视化、传感器+AI联动，3节)<br>
-3.6 对话机器人扩展创作 (4节，基于现有素材深化)</span>
+              <span class="source-label source-existing">全部现有</span>
+              <span>02语音识别32/02语音识别13/ (06语音开关灯、08智能查询天气、10专家系统、11小小翻译家1、12小小翻译家2、13语音打电话发短信)<br>
+01文字朗读16/07报时定时4/ (7.3链表批量定时、7.4定时天气预报) + 05面部识别11/ (08人脸开门进阶、09车牌识别1、10车牌识别2、11OCR文字识别)<br>
+03视频侦测10/ (08勇救小猫、09打气球) + 02语音识别32/01响度相关19/ (08帆船大赛、17飞跃高山) + 04人脸追踪4/ (03用鼻子画画)<br>
+02语音识别32/01响度相关19/ (14列表记录声音、16锻炼肺活量、18响度指示器) + 03视频侦测10/02制作字幕2/ + 05面部识别11/09 (乐高EV3版)<br>
+02语音识别32/02语音识别13/09与机器人语音对话/ (3.5阶段项目，融合语音识别+TTS+对话逻辑)</span>
             </div>
           </div>
           <div class="projects">
             <div class="projects-title">代表项目</div>
             <div class="projects-list">
-              <span class="project-item">垃圾分类助手</span>
-              <span class="project-item">AI 健身教练</span>
+              <span class="project-item">小小翻译家</span>
               <span class="project-item">智能停车场</span>
-              <span class="project-item">家庭安全卫士</span>
+              <span class="project-item">勇救小猫</span>
+              <span class="project-item">专家系统</span>
               <span class="project-item">对话机器人</span>
             </div>
           </div>
@@ -574,6 +564,7 @@ footer p { margin-bottom: 4px; }
           <li>每节课 1 小时，每个主题独立成课</li>
           <li>每周 1-2 节课</li>
           <li>共 83 节课，约需 42-83 周（约 1-2 学年）</li>
+          <li>建议节奏：第一阶段每周1节(24周)，第二阶段每周1-2节(15-30周)，第三阶段每周1-2节(15-29周)</li>
           <li>每节课：情境导入(5min) + 新知探索(15min) + 动手实践(25min) + 分享展示(10min) + 总结延伸(5min)</li>
         </ul>
       </div>
@@ -584,17 +575,17 @@ footer p { margin-bottom: 4px; }
           <li>软件：Kittenblock / mDesigner</li>
           <li>硬件：电脑（摄像头 + 麦克风）</li>
           <li>可选：乐高 EV3 套件</li>
-          <li>可选：MicroBit 板 / LED 灯带</li>
+          <li>已有 PPT 课件和视频教程可直接复用，无需额外制作</li>
         </ul>
       </div>
       <div class="impl-card impl3">
         <div class="impl-card-icon">&#x1F4CA;</div>
         <h3>评估方式</h3>
         <ul>
-          <li>过程性评估：每节课作品完成度</li>
-          <li>阶段性评估：阶段综合项目展示</li>
-          <li>创新性评估：自主选题项目创意与完成度</li>
-          <li>AI 能力护照：记录解锁的每项 AI 能力</li>
+          <li>过程性评估：每节课的作品完成度</li>
+          <li>阶段性评估：每个阶段结束时的综合项目展示</li>
+          <li>创新性评估：第三阶段自主选题项目的创意和完成度</li>
+          <li>建议设置「AI 能力护照」，记录学生解锁的每项 AI 能力</li>
         </ul>
       </div>
     </div>
@@ -610,8 +601,6 @@ footer p { margin-bottom: 4px; }
 document.addEventListener('DOMContentLoaded', function() {
   const pathSteps = document.querySelectorAll('.path-step');
   const pathProgress = document.getElementById('pathProgress');
-  const tabContents = document.querySelectorAll('.tab-content');
-  const tabContainer = document.querySelector('.tab-content-container');
   let currentPhase = 1;
   let isAnimating = false;
 
@@ -621,13 +610,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const stepWidth = containerWidth / 3;
     const startPos = stepWidth / 2 - 2;
     const width = (currentPhase - 1) * stepWidth;
-    
     pathProgress.style.left = `${startPos}px`;
     pathProgress.style.width = `${width}px`;
-  }
-
-  function setContentHeight(content, height) {
-    content.style.height = `${height}px`;
   }
 
   function switchPhase(phase) {
@@ -642,15 +626,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (prevStep) prevStep.classList.remove('active');
     if (nextStep) nextStep.classList.add('active');
 
-    const prevHeight = prevContent ? prevContent.offsetHeight : 0;
-    
     nextContent.style.height = 'auto';
     const nextHeight = nextContent.offsetHeight;
     nextContent.style.height = '0px';
-    
+
     if (prevContent) {
       prevContent.classList.add('animate-out');
-      prevContent.style.height = `${prevHeight}px`;
+      prevContent.style.height = prevContent.offsetHeight + 'px';
     }
 
     requestAnimationFrame(() => {
